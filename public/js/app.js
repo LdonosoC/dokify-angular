@@ -8,7 +8,9 @@ app.controller('CompanyCtrl', function ($scope) {
 
 	company.name 		= 'dokify';
 	company.employees 	= [
-		{name: 'pepe', vat: '1234'}
+		{name: 'pepe', surname:"lopez perez", vat: '1234'},
+		{name: 'luis', surname:"perez fernandez",vat: '5678'},
+		{name: 'pedro', surname:"garcia gonzalez",vat: '9234'}
 	];
 
 	$scope.company = company;
