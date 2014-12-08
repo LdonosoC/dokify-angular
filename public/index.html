@@ -8,12 +8,12 @@
 		<div ng-controller="CompanyCtrl">
 			<p>
 				Empresa {{company.name}}
-				<button ng-click="company.employees.push({name: 'luis', vat:'2323'})">+1</button>
 			</p>
+			Search: <input ng-model="query">
+
 			<ul>
-				<li ng-repeat="employee in company.employees">
-					<span>{{employee.name}} of company {{company.name}}</span>
-					<p>{{employee.vat}}</p>
+				<li ng-repeat="employee in company.employees | filter:query" >
+					{{employee.name}} {{employee.surname }}
 				</li>
 			</ul>
 		</div>
